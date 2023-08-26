@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dev
+    username: phamust
+    password: 54666277
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    security:
+      jwt:
+        secret-key: PYzYbnzeQbkK4CCgbKBsn+PFxcjBCAXckQ+808Wz7oU=
+        expiration: 60000 #one day
+        refreshToken:
+          expiration: 604800000 #one week
